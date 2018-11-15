@@ -1,0 +1,58 @@
+/*! cover  element default  style*/
+
+
+/* 覆盖左侧导航栏菜单相关element ui样式 */
+
+.left-menu .menu-container .el-menu {
+    border-right: none;
+}
+
+.left-menu .el-menu-item,
+.left-menu .el-submenu__title {
+    height: 48px;
+    line-height: 48px;
+}
+
+.left-menu .el-menu .el-submenu.is-opened .el-menu {
+    /* max-height: 200px; */
+    /* overflow: auto; */
+}
+
+.left-menu .menu-container .menu-main .el-menu .el-menu-item {
+    padding-left: 24px!important;
+}
+
+.left-menu .menu-container .el-menu-item,
+.left-menu .menu-container .el-menu .el-submenu .el-submenu__title {
+    text-align: left;
+}
+
+.left-menu .menu-container .el-menu-item:focus,
+.left-menu .menu-container .el-menu-item:hover,
+.left-menu .menu-container .el-menu-item.is-active {
+    background-color: #4162ff!important;
+}
+
+.left-menu .menu-container .el-submenu .el-menu .el-menu-item-group .el-menu-item {
+    padding: 0 0;
+    min-width: auto;
+}
+
+
+/* 弹框样式修改 */
+
+.el-dialog__header {
+    background-color: #324157;
+    color: #fff;
+}
+
+
+/* 去掉弹框内容主体的内边距 */
+
+.el-dialog__body {
+    padding: 0;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+    color: #4162ff;
+}

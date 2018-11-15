@@ -1,0 +1,59 @@
+@import "../mixin.scss";
+@import "../icon.scss";
+.user-container {
+    width: 100%;
+    height: 100%;
+    .user-main {
+        .main-body {
+            padding: 16px;
+            .body-top {
+                background-color: #fff;
+                margin-bottom: 10px;
+                height: 70px;
+                .top-box {
+                    .search-box {
+                        width: 220px;
+                        padding: 15px 0;
+                        height: 40px;
+                        line-height: 40px;
+                        .search-input {
+                            position: relative;
+                            margin-left: 20px;
+                            .searchbtn {
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                width: 50px;
+                                cursor: pointer;
+                                span {
+                                    vertical-align: text-bottom;
+                                }
+                                &:hover {
+                                    .icon-search {
+                                        background: url("/static/image/search-active.png") center center no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .operate {
+                        line-height: 40px;
+                        height: 40px;
+                        padding: 15px;
+                    }
+                }
+            }
+            .body-container {
+                background-color: #fff;
+                .body-content {
+                    .body-list {
+                        .op-item {
+                            float: left;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

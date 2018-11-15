@@ -1,0 +1,56 @@
+.detail-container {
+    text-align: left;
+    .detail-main {
+        .main-body {
+            padding: 16px;
+            .body-top {
+                background-color: #fff;
+                margin-bottom: 10px;
+                height: 70px;
+                .top-box {
+                    height: 70px;
+                    line-height: 70px;
+                    .tabs-nav {
+                        .nav-item {
+                            float: left;
+                            padding: 0 20px;
+                            color: #777;
+                            position: relative;
+                            cursor: pointer;
+                            .nav-title {
+                                text-align: center;
+                            }
+                            .navhidden {
+                                height: 0;
+                            }
+                            &.active {
+                                color: #000;
+                                .navhidden {
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 100%;
+                                    border-bottom: 3px solid #4162ff;
+                                }
+                            }
+                        }
+                    }
+                    .operate {
+                        float: right;
+                        .ope-item {
+                            float: left;
+                            margin-right: 10px;
+                            &:last-child {
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            .body-container {
+                background-color: #fff;
+                .body-content {}
+            }
+        }
+    }
+}
