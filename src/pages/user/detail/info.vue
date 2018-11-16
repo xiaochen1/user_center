@@ -48,6 +48,7 @@ export default {
     data: function(){
         return {
             sheetList: [],
+            currentId: "",
             showSheetObj: {
                 user_id: "1001",
                 username: "admin",
@@ -63,6 +64,16 @@ export default {
 
 
         }
+    },
+
+
+    created: function(){
+        console.log(this.$route);
+        this.currentId = this.$route.query.id ? this.$route.query.id : "";
+    },
+
+    mounted: function(){
+        console.log("moundted----id ----" + this.currentId);
     }
 }
 </script>

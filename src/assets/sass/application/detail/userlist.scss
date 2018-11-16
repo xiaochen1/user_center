@@ -1,0 +1,27 @@
+@import "../../mixin.scss";
+@import "../../icon.scss";
+.userlist-container {
+    .userlist-main {
+        .data-list {
+            overflow: auto;
+            .eqimg-box {
+                img {
+                    display: inline-block;
+                    width: 74px;
+                    height: 56px;
+                }
+            }
+            .opbox {
+                overflow: hidden;
+                .op-item {
+                    float: left;
+                    cursor: pointer;
+                }
+            }
+        }
+        .page-box {
+            padding: 10px 0;
+            margin: 0 auto;
+        }
+    }
+}

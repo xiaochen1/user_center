@@ -16,9 +16,6 @@
                     <div class="top-box fr">
 
                         <div class="operate" v-show="currentcomp == 'info'">
-                            <div class="ope-item">
-                                <el-button  type="warning">重置密码application</el-button>
-                            </div>
 
                             <div class="ope-item">
                                 <el-button  type="success">编辑</el-button>
@@ -80,14 +77,11 @@ export default {
                 name: "信息",
                 comp: "info"
             },{
-                name: "所属组",
-                comp: "belonggroup"
+                name: "用户列表",
+                comp: "userlist"
             },{
-                name: "可访问应用",
-                comp: "accessapp"
-            },{
-                name: "设备列表",
-                comp: "devicelist"
+                name: "用户组列表",
+                comp: "usergrouplist"
             }],
 
             acindex: 0,

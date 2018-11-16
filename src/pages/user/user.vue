@@ -98,7 +98,7 @@
         console.log("row click");
         console.log(row);
 
-        this.$router.push({path: "/user/detail"} );
+        this.$router.push({path: "/user/detail", query: {id: "123"}} );
       }
     },
   }

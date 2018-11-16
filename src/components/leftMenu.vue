@@ -8,6 +8,7 @@
 
         <div class="main-body">
           <el-menu 
+            ref="leftmenu"
             background-color="#324157" 
             text-color="#999999" 
             active-text-color="#fff" 
@@ -71,10 +72,23 @@
       }
     },
 
-    created: function(){
+    mounted: function(){
       console.log(this.$route);
-    },
+      // console.log(this.$route.path.substring(0,6));
+      console.log(this.$refs.leftmenu.$data);
 
+      if(this.$route.path.substring(0,10) == "/usergroup"){
+        this.$refs.leftmenu.$data.activeIndex = "/usergroup";
+      }
+
+      if(this.$route.path.substring(0,6) == "/user/"){
+        this.$refs.leftmenu.$data.activeIndex = "/user";
+      }
+     
+      if(this.$route.path.substring(0,12) == "/application"){
+        this.$refs.leftmenu.$data.activeIndex = "/application";
+      }
+    },
 
     methods: {
       goto(name) {
