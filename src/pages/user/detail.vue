@@ -56,7 +56,7 @@
 
                 <div class="body-container flexauto flex-column">
                     <div class="body-content flexauto flex-column">
-                        <component :is="currentcomp"></component>
+                        <component :is="currentcomp" :userId="userId"></component>
                     </div>
                 </div>
             </div>
@@ -77,6 +77,7 @@ export default {
 
     data: function(){
         return {
+            userId: "",
             currentcomp: "info",
             tabArr: [{
                 name: "信息",
@@ -97,6 +98,7 @@ export default {
     },
     mounted: function(){
         console.log(this.$route.params);
+        this.userId = this.$route.query ? this.$route.query.id : "";
     },
 
     methods: {

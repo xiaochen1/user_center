@@ -1,6 +1,6 @@
 <template>
     <div class="userhome flexauto  flex-column">
-        <router-view></router-view>
+        <router-view ></router-view>
     </div>
 </template>
 
@@ -9,8 +9,12 @@
 export default {
     data: function(){
         return {
-            
         }
+    },
+
+
+    methods:{
+      
     }
 }
 </script>

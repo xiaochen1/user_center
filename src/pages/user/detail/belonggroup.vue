@@ -114,8 +114,7 @@ import pagination from "@/components/pagination"
           console.log("page----change");
       }
     },
-
-
+    props: ["userId"],
     components: {
         "pagination": pagination
     }

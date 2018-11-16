@@ -266,9 +266,10 @@
     methods: {
       goHome() {
         console.log(this.$route);
-        this.$router.push({
-          path: "/"
-        });
+        window.location.href = "/";
+        // this.$router.push({
+        //   path: "/"
+        // });
       },
       toShowAccountInfoView() {
         this.isShowAccuntInfoView = true;

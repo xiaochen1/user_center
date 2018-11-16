@@ -6,6 +6,7 @@
           <el-table-column fixed prop="user_id" label="用户组ID" width="180" >
               <template slot-scope="scope">
                   <div class="eqimg-box">
+                      {{userId}}
                       <img src="scope.row.img" alt="" width="74"  height="56"  />
                   </div>
               </template>
@@ -122,7 +123,9 @@ import pagination from "@/components/pagination"
 
     components: {
         "pagination": pagination
-    }
+    },
+
+    props: ["userId"],
   };
 </script>
 

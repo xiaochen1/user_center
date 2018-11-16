@@ -27,13 +27,13 @@
               <el-table :data="tableListArr" style="width: 100%" height="100%" 
                 @row-click="handleUserRowClick">
 
-                <el-table-column prop="ID" label="用户ID">
+                <el-table-column prop="user_id" label="用户ID">
 
                 </el-table-column>
                 <el-table-column prop="username" label="用户名称">
 
                 </el-table-column>
-                <el-table-column prop="ID" label="所属组">
+                <el-table-column prop="group_id" label="所属组">
 
                 </el-table-column>
                 <el-table-column prop="mobile" label="手机号码">
@@ -45,7 +45,7 @@
                 <el-table-column prop="created" label="创建时间">
 
                 </el-table-column>
-                <el-table-column prop="ID" label="操作">
+                <el-table-column  label="操作">
                   <template slot-scope="scope">
                     <div class="opbox">
                       <div class="op-item">
@@ -75,7 +75,7 @@
         searchInput: "",
 
         tableListArr: [{
-          ID: 1,
+          user_id: "1001",
           username: "he",
           mobile: 12345678900,
           address: "美生创谷",
@@ -97,8 +97,11 @@
       handleUserRowClick(row) {
         console.log("row click");
         console.log(row);
-
-        this.$router.push({path: "/user/detail", query: {id: "123"}} );
+        var self = this;
+        this.$router.push({path: "/user/detail", query: {id: "123"}},  function(){
+          console.log("跳转到  /user/detail成功");
+          self.$emit("getId", row.user_id);
+        } );
       }
     },
   }

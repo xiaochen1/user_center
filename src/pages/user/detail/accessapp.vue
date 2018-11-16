@@ -3,12 +3,17 @@
     <div class="access-main flexauto flex-column">
       <div class="data-list flexauto">
         <el-table :data="sheetList" border style="width: 100%" height="100%">
-          <el-table-column fixed prop="user_id" label="用户组ID" width="180">
+          <el-table-column fixed prop="client_id" label="应用ID" width="180">
 
           </el-table-column>
-          <el-table-column prop="username" label="用户组名称">
+          <el-table-column prop="client_name" label="应用名称">
           </el-table-column>
-          <el-table-column prop="province" label="级别">
+          <el-table-column prop="listorder" label="排序">
+          </el-table-column>
+          <el-table-column prop="is_sso" label="是否单点登录">
+          </el-table-column>
+
+          <el-table-column prop="is_available" label="是否有效">
           </el-table-column>
 
           <el-table-column fixed="right" label="操作" width="120">
@@ -118,7 +123,9 @@
 
     components: {
       "pagination": pagination
-    }
+    },
+
+    props: ["userId"],
   };
 </script>
 

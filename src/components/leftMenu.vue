@@ -2,7 +2,7 @@
   <div class="left-menu">
     <div class="menu-container flex-column">
       <div class="system">
-        <span>MIXPASSPORT</span> {{menuActiveIndex}}
+        <span>MIXPASSPORT</span>
       </div>
       <div class="menu-main flex-1 flex-column">
 

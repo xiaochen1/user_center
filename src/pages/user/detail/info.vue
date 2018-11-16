@@ -27,7 +27,11 @@
             </div>
             <div class="info-item">
                 <div class="item-title">职务</div>
-                <div class="item-content">{{showSheetObj.user_id}}</div>
+                <div class="item-content">{{showSheetObj.position}}</div>
+            </div>
+             <div class="info-item">
+                <div class="item-title">是否超管</div>
+                <div class="item-content">{{showSheetObj.is_super}}</div>
             </div>
             <div class="info-item item-row">
                 <div class="item-title">地址</div>
@@ -54,6 +58,7 @@ export default {
                 username: "admin",
                 mobile: "12345678900",
                 description: "描述啊",
+                is_super: 1,
                 email: "123@qq.com",
                 address: "美生创谷美生创谷美生创谷美生创谷美生创谷美生创谷美生创谷美生创谷美生创谷",
                 created: "2018-11-15"
@@ -74,7 +79,11 @@ export default {
 
     mounted: function(){
         console.log("moundted----id ----" + this.currentId);
-    }
+        console.log(this.$parent);
+    },
+
+
+    props: ["userId"],
 }
 </script>
 
